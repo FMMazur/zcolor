@@ -6,7 +6,7 @@ pub const TrueColor = @import("config.zig").TrueColor;
 pub const Color = @import("config.zig").Color;
 pub const Style = @import("config.zig").Style;
 
-fn text(str: []const u8) Text {
+pub fn text(str: []const u8) Text {
     return .{
         .text = str,
     };
