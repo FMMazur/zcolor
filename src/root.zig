@@ -7,9 +7,9 @@ pub const Color = @import("config.zig").Color;
 pub const Style = @import("config.zig").Style;
 
 pub fn text(str: []const u8) Text {
-    return .{
-        .text = str,
-    };
+    comptime {
+        return Text.init(str);
+    }
 }
 
 test "basic simple bg" {
